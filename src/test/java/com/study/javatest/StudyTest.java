@@ -6,17 +6,20 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * JUnit5부터는 public을 붙여줄 필요 없음
  * */
+// 클래스에 적용하면 전체 테스트 이름을 어떤 전략으로 보여줄지 정함
+@DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 class StudyTest {
 
     @Test
-    void studyTest() {
+    @DisplayName("스터디 객체 생성 테스트")
+    void study_test() {
         Study study = new Study();
         assertNotNull(study);
     }
 
     @Test
     @Disabled // 테스트 실행에서 제외할때
-    void create1() {
+    void create1_test() {
         System.out.println("create1");
     }
 
