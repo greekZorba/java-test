@@ -15,6 +15,7 @@ class StudyTest {
     void study_test() {
         Study study = new Study();
         assertNotNull(study);
+        assertEquals(StudyStatus.DRAFT, study.getStatus());
     }
 
     @Test
